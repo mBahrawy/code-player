@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Code Player</title>
+
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link href="assets/numberLine/jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+
+
+  </head>
+  <body>
+    <div id="topDiv" class="navbar navbar-default">
+      <div class="container-fluied">
+        <div class="navbar-header">
+          <a href="" class="navbar-brand"
+            ><img class="logoImg" src="assets/images/logo.png"
+          /></a>
+        </div>
+        <div style="clear: both"></div>
+
+        <div class="btnsContainer">
+          <div class="myBtns">
+            <a id="toggleHTMLbtn" class="toggle selected ainmateBtn" href="#"
+              >HTML</a
+            >
+          </div>
+          <div class="myBtns">
+            <a id="toggleCSSbtn" class="toggle ainmateBtn" href="#">CSS</a>
+          </div>
+          <div class="myBtns">
+            <a id="toggleJSbtn" class="toggle ainmateBtn" href="#"
+              >JavaScript</a
+            >
+          </div>
+          <div class="myBtns">
+            <a id="toggleResultbtn" class="toggle selected ainmateBtn" href="#"
+              >Result</a
+            >
+          </div>
+
+          <div class="myBtns">
+            <a id="runIt" href="#" class="toggle ainmateBtn"
+              >Run code <span class="glyphicon glyphicon-ok"></span
+            ></a>
+          </div>
+          <div class="myBtns">
+            <a id="totalCodeDownloader" class="toggle ainmateBtn"
+              >Download total code
+              <span class="glyphicon glyphicon-circle-arrow-down"></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluied">
+      <div id="htmlCSSJSContainer" class="col-sm-7 hightFix">
+        <div id="toggleHTML">
+          HTML Codes
+          <div id="HTMLoptions" class="DownloaderBox">
+            <span id="counterHTML"></span> -
+            <button id="HTMLcodeDownloader" class="downloadBtn">
+              Download
+            </button>
+          </div>
+          <br />
+          <textarea id="HTMLcode" class="numberLine"></textarea>
+        </div>
+        <div id="toggleCSS" class="col-sm-6 nomargin heddinToggle">
+          CSS Codes
+          <div id="CSSoptions" class="DownloaderBox">
+            <span id="counterCSS"></span> -
+            <button id="CSScodeDownloader" class="downloadBtn">Download</button>
+          </div>
+          <br />
+          <textarea class="numberLine" id="CSScode"></textarea>
+        </div>
+        <div id="toggleJS" class="col-sm-6 nomargin heddinToggle">
+          JavaScript Codes
+          <div id="JSoptions" class="DownloaderBox">
+            <span id="counterJS"></span> -
+            <button id="JSodeDownloader">Download</button>
+          </div>
+
+          <br />
+          <textarea class="numberLine" id="JScode"></textarea>
+        </div>
+      </div>
+      <div id="ResultFrameContainer" class="col-sm-5 hightFix">
+        <div id="toggleResult">
+          Result
+          <br />
+          <iframe id="ResultFrame"></iframe>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/javascript.js"></script>
+    <script type="text/javascript" src="assets/js/code_downloader.js"></script>
+    <script src="assets/numberLine/jquery-linedtextarea.js"></script>
+
+    <script>
+      $(function () {
+        $(".numberLine").linedtextarea({ selectedLine: 1 });
+      });
+    </script>	
+  </body>
+</html>
